@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/black"
+    app:contentPadding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagenContact"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/contacto32" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imagenContact"
+            android:layout_toRightOf="@id/imagenContact"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/imagenContact"
+                android:layout_toRightOf="@id/imagenContact"
+                android:text="@string/etNombre"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvTelefonos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNombres"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/white"
+                android:layout_toEndOf="@id/imagenContact"
+                android:layout_toRightOf="@id/imagenContact"
+                android:text="@string/etTelefono" />
+        </LinearLayout>
+        <!--Para mostrar opciones como eliminar, editar, etc.-->
+        <ImageButton
+            android:id="@+id/moreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
